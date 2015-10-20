@@ -52,7 +52,7 @@ public class AccountService extends BaseService<UserInfo> {
 
 
     @Override
-    protected BaseDAO getDAO() {
+    public BaseDAO getDAO() {
         return userInfoDAO;
     }
 }

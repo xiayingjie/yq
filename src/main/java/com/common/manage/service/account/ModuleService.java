@@ -22,7 +22,7 @@ public class ModuleService extends BaseService<Module> {
 
 
     @Override
-    protected BaseDAO getDAO() {
+    public BaseDAO getDAO() {
         return moduleDAO;
     }
 }

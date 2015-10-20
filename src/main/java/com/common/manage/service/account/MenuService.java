@@ -22,7 +22,7 @@ public class MenuService extends BaseService<Menu> {
 
 
     @Override
-    protected BaseDAO getDAO() {
+    public BaseDAO getDAO() {
         return menuDAO;
     }
 

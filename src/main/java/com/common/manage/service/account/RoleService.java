@@ -20,9 +20,8 @@ public class RoleService extends BaseService<Role> {
     @Autowired
     private RoleDAO roleDAO;
 
-
     @Override
-    protected BaseDAO getDAO() {
+    public BaseDAO getDAO() {
         return roleDAO;
     }
 }

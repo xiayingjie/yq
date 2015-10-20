@@ -51,7 +51,7 @@ public class ActionController extends BaseController {
     //增加
     @RequiresPermissions("admin:action:edit")
     @RequestMapping(value="add",method = RequestMethod.POST)
-    public String toAdd(Action actionInfo,HttpServletRequest request,int moduleId) {
+    public String add(Action actionInfo,HttpServletRequest request,int moduleId) {
         actionInfo.setModule(this.moduleService.findById(moduleId));
         this.actionService.save(actionInfo);
 
@@ -63,6 +63,7 @@ public class ActionController extends BaseController {
     @RequiresPermissions("admin:action:edit")
     @RequestMapping(value="toAlter/{id}")
     public String toAlter(Model model,@PathVariable("id")int id) {
+
         Action actionInfo=this.actionService.findById(id);
         model.addAttribute("moduleList",this.moduleService.findAll());
         model.addAttribute("actionInfo",actionInfo);

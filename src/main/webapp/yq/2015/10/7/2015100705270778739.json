@@ -1,0 +1,97 @@
+{
+    "mappings": {
+        "discovery": {
+            "properties": {
+                "detail": {
+                    "type": "string",
+                    "store": "yes",
+                    "index": "analyzed",
+                    "analyzer": "ik"
+                },
+                "category": {
+                    "type": "string",
+                    "store": "yes",
+                    "index": "not_analyzed"
+                },
+                "type": {
+                    "type": "integer",
+                    "store": "yes",
+                    "index": "not_analyzed"
+                },
+                "reward": {
+                    "type": "integer",
+                    "store": "yes",
+                    "index": "not_analyzed"
+                },
+                "discoveryTime": {
+                    "type": "long",
+                    "store": "yes",
+                    "index": "not_analyzed"
+                },
+                "discoveryAddress": {
+                    "type": "string",
+                    "store": "yes",
+                    "index": "no"
+                },
+                "location": {
+                    "type": "geo_point"
+                },
+                "image": {
+                    "type": "string",
+                    "store": "yes",
+                    "index": "no"
+                },
+                "infoAddress": {
+                    "type": "string",
+                    "store": "yes",
+                    "index": "no"
+                },
+                "favoriteCount": {
+                    "type": "long",
+                    "store": "yes",
+                    "index": "not_analyzed"
+                },
+                "replyCount": {
+                    "type": "long",
+                    "store": "yes",
+                    "index": "not_analyzed"
+                },
+                "status": {
+                    "type": "integer",
+                    "store": "yes",
+                    "index": "no"
+                },
+                "adoptAnswer": {
+                    "type": "integer",
+                    "store": "yes",
+                    "index": "no"
+                },
+                "user": {
+                    "type": "object",
+                    "properties": {
+                        "id": {
+                            "type": "integer",
+                            "store": "yes",
+                            "index": "no"
+                        },
+                        "nickName": {
+                            "type": "integer",
+                            "store": "yes",
+                            "index": "no"
+                        },
+                        "image": {
+                            "type": "integer",
+                            "store": "yes",
+                            "index": "no"
+                        },
+                        "sex": {
+                            "type": "integer",
+                            "store": "yes",
+                            "index": "no"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

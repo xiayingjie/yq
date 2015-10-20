@@ -1,0 +1,5 @@
+#!/bin/bash
+cd /Users/xiayingjie/Documents/project/java/rc
+mvn clean package
+scp target/common.war root@43.254.55.184:/opt/webroot
+ssh root@43.254.55.184 "cd /opt/webroot/;ls |grep -v common.war |xargs rm -rf;jar vxf common.war;/opt/apache-tomcat-7.0.63/bin/catalina.sh stop;/opt/apache-tomcat-7.0.63/bin/catalina.sh start;"

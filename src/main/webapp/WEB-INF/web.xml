@@ -5,10 +5,11 @@
     <display-name>lucky</display-name>
     <!--spring加载-->
     <context-param>
-        <param-name>contextConfigLocation</param-name>
+       <param-name>contextConfigLocation</param-name>
         <param-value>
             classpath*:/spring/applicationContext.xml,
             classpath*:/spring/applicationContext-shiro.xml
+            classpath*:/spring/applicationContext-data.xml
         </param-value>
     </context-param>
 

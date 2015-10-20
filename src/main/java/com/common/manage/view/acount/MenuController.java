@@ -48,7 +48,7 @@ public class MenuController extends BaseController {
     //增加
     @RequiresPermissions("admin:menu:edit")
     @RequestMapping(value="add",method = RequestMethod.POST)
-    public String toAdd(Menu menuInfo,HttpServletRequest request) {
+    public String add(Menu menuInfo,HttpServletRequest request) {
         this.menuService.save(menuInfo);
         //跳转
         String currentPage= (String) request.getSession().getAttribute("currentPage");

@@ -1,0 +1,4 @@
+#!/bin/bash
+mysqldump -uroot  --add-drop-database --add-drop-table auto>auto.sql
+scp auto.sql root@43.254.55.184:/opt/
+ssh root@43.254.55.184 "cd /opt/; mysql -uroot auto<auto.sql"

@@ -54,7 +54,7 @@ public class UserController extends BaseController {
     //增加
     @RequiresPermissions("admin:user:edit")
     @RequestMapping(value = "add", method = RequestMethod.POST)
-    public String toAdd(UserInfo userInfo, HttpServletRequest request) {
+    public String add(UserInfo userInfo, HttpServletRequest request) {
 
         this.accountService.save(userInfo);
         //跳转

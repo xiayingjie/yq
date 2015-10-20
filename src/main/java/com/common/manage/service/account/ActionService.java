@@ -23,7 +23,7 @@ public class ActionService extends BaseService<Action> {
 
 
     @Override
-    protected BaseDAO getDAO() {
+    public BaseDAO getDAO() {
         return actionDAO;
     }
 }

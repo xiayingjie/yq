@@ -45,7 +45,7 @@ public class ModuleController extends BaseController {
     //增加
     @RequiresPermissions("admin:module:edit")
     @RequestMapping(value="add",method = RequestMethod.POST)
-    public String toAdd(Module moduleInfo,HttpServletRequest request) {
+    public String add(Module moduleInfo,HttpServletRequest request) {
         this.moduleService.save(moduleInfo);
         //跳转
         String currentPage= (String) request.getSession().getAttribute("currentPage");

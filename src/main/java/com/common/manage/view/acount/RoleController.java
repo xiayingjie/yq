@@ -61,7 +61,7 @@ public class RoleController extends BaseController {
     //增加
     @RequiresPermissions("admin:role:edit")
     @RequestMapping(value="add",method = RequestMethod.POST)
-    public String toAdd(Role roleInfo,HttpServletRequest request) {
+    public String add(Role roleInfo,HttpServletRequest request) {
         this.roleService.save(roleInfo);
         //跳转
         String currentPage= (String) request.getSession().getAttribute("currentPage");
