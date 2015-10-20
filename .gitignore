@@ -5,3 +5,7 @@ rc.iml
 auto.sql
 auto.sql.bak
 data
+.idea
+.classpath
+.project
+rc.im1
